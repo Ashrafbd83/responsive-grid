@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design using Grid</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 30px;
+        width: 100%;
+        min-width: 100vh;
+        font-family: serif;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 4vh;
+        height: 100vh;
+      }
+      [class^="box-"] {
+        background-color: #fff;
+        width: 100%;
+        align-items: center;
+        border: 5px solid green;
+        display: grid;
+        justify-items: center;
+        border-radius: 10px;
+      }
+      @media (max-width:768px){
+       .container{
+        height:150vh;
+         grid-template-columns:repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);}
+      }
+      @media (max-width:600px){
+       .container{height:200vh;
+
+         grid-template-columns:repeat(1,1fr);
+         grid-template-rows: repeat(9,1fr);}}
+    
+    </style>
+
+    <div class="container">3
+      <div class="box-1">A</div>3
+      <div class="box-2">B</div>
+      <div class="box-3">C</div>
+      <div class="box-4">D</div>
+      <div class="box-5">E</div>
+      <div class="box-6">F</div>
+      <div class="box-7">G</div>
+      <div class="box-8">H</div>
+      <div class="box-9">I</div>
+    </div>
+  </body>
+</html>
